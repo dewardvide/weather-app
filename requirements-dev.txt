@@ -1,0 +1,6 @@
+-r requirements.txt
+mypy==1.19.1
+pytest==9.0.2
+ruff==0.15.7
+pytest-cov==7.1.0
+types-requests>=2.32.4.0

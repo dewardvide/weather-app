@@ -1,0 +1,17 @@
+[project]
+name = "weather-app"
+version = "0.0.1"
+description = "a simple weather-app" 
+
+[tools.ruff]
+
+#Python version
+target-version = "py313"
+
+#Line length - same as black
+line-length = 88
+indent-width = 4
+
+#Linter ocnfiguration
+[tool.ruff.lint]
+select = ["E", "F", "I"]
