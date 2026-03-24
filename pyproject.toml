@@ -3,15 +3,21 @@ name = "weather-app"
 version = "0.0.1"
 description = "a simple weather-app" 
 
-[tools.ruff]
+[tool.ruff]
 
 #Python version
-target-version = "py313"
+target-version = "py314"
 
 #Line length - same as black
 line-length = 88
 indent-width = 4
 
-#Linter ocnfiguration
+#Linter configuration
 [tool.ruff.lint]
 select = ["E", "F", "I"]
+
+[tool.mypy]
+
+python_version = "3.14"
+strict = true
+mypy_path = "src"
