@@ -21,3 +21,8 @@ select = ["E", "F", "I"]
 python_version = "3.14"
 strict = true
 mypy_path = "src"
+
+[tool.pytest.ini_options]
+minversion = "9.0"
+addopts = "--junitxml=test-results.xml --cov=src/weather --cov-report=xml:coverage.xml --cov-report=term-missing"
+testpaths = ["tests"]
