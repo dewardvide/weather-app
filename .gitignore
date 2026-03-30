@@ -1,8 +1,12 @@
 test_venv/
 .vscode/
 .venv/
-
 coverage.xml
 test-results.xml 
 .coverage
-/tests/__pycache__/
+__pycache__/
+.env
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
