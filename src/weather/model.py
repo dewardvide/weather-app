@@ -8,6 +8,12 @@ class WeatherDataError(Exception):
     pass
 
 
+class GeoCodingError(Exception):
+    """Custom exception for errors in geocoding."""
+
+    pass
+
+
 weathercodes = {
     0: "Clear sky",
     1: "Mainly clear",
@@ -65,7 +71,7 @@ class WeatherData:
             "temperature_2m",
             "relative_humidity_2m",
             "wind_speed_10m",
-            "weathercode",
+            "weather_code",
         ]
         for field in required_fields:
             if field not in current_weather:
@@ -83,7 +89,7 @@ class WeatherData:
         temperature = current_weather["temperature_2m"]
         humidity = current_weather["relative_humidity_2m"]
         wind_speed = current_weather["wind_speed_10m"]
-        weathercode = current_weather["weathercode"]
+        weathercode = current_weather["weather_code"]
         description = weathercodes[weathercode]
 
         return cls(
